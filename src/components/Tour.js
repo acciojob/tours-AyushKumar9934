@@ -10,12 +10,12 @@ const Tour = (props) => {
         <h2>{props.id}</h2>
         <h3>{props.name}</h3>
         <>
-        <p>{desire_text}...</p>
+        <p id={`tour-item-para-${props.id}`}>{desire_text}...</p>
         <button onClick={()=>setIsExpanded(!isExpanded)}>{isExpanded?"Show more":"See less"}</button>
         </>
         <img src={props.image}></img>
         <h3>{props.price}</h3>
-        <button onClick={() => props.afterDelete(props.id)}>Delete tour</button>
+        <button id={`delete-btn-${props.id}`} onClick={() => props.afterDelete(props.id)}>Delete tour</button>
 
     </div>
   )
