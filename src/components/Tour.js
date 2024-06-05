@@ -11,7 +11,7 @@ const Tour = (props) => {
         <h3>{props.name}</h3>
         <>
         <p id={`tour-item-para-${props.id}`}>{desire_text}...</p>
-        <button onClick={()=>setIsExpanded(!isExpanded)}>{isExpanded?"Show more":"See less"}</button>
+        <button  id={`see-more-${props.id}`} onClick={()=>setIsExpanded(!isExpanded)}>{isExpanded?"Show more":"See less"}</button>
         </>
         <img src={props.image}></img>
         <h3>{props.price}</h3>
